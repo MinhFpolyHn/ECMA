@@ -1,6 +1,11 @@
 const Header = {
     render() {
         return /* html */`
+        <div class="bg-[#272f54] py-4">
+          <a href="#">
+            <img src="image/lg.jpg" alt="" class="mx-auto" />
+          </a>
+        </div>
         <div class="bg-orange-300">
             <ul class="flex">
             <li><a href="/" class="block px-4 py-5 hover:bg-blue-500 hover:text-white">Trang chủ</a></li>
