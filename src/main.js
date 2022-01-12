@@ -5,6 +5,7 @@ import AboutPage from "./pages/about";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
 import CallPage from "./pages/called";
+import DetailPage from "./pages/detail";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = (content) => {
@@ -24,6 +25,10 @@ router.on({
     },
     "/no": () => {
         print(CallPage.render());
+    },
+    "/product/:id": (Data1) => {
+        const { id } = Data1;
+        print(DetailPage.render(+id));
     },
     // "/product/:id": ({ data }) => {
     //     const { id } = data;

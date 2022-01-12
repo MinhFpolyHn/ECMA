@@ -3,7 +3,9 @@ import { Data2 } from "../data";
 const Acts = {
     render() {
         return /* html */`
+        <div class="uppercase font-bold text-xl my-5 text-blue-800">
         <h2>Hoat động học tập</h2>
+        </div>
         <div class="grid grid-cols-3 gap-8">
             ${Data2.map((post) => `
             <div>
