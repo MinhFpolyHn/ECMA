@@ -8,7 +8,10 @@ import CallPage from "./pages/called";
 import DetailPage from "./pages/detail";
 import AdminProductPage from "./pages/admin/adminproduct";
 import Signup from "./pages/signup";
-import AdminProductEdit from "./pages/admin/productEdit";
+// import AdminProductEdit from "./pages/admin/productEdit";
+import Signin from "./pages/signin";
+import EditProduct from "./pages/admin/editproduct";
+import Dashboard from "./pages/admin/dashboardPage";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = (content) => {
@@ -29,23 +32,25 @@ router.on({
     "/no": () => {
         print(CallPage.render());
     },
-    "/product/:id": ({ data }) => {
+    "/products/:id": ({ data }) => {
         const { id } = data;
         print(DetailPage.render(+id));
     },
     "/admin/products": () => {
         print(AdminProductPage.render());
     },
+    "/admin/Dashboard": () => {
+        print(Dashboard.render());
+    },
+    "/admin/products/:id/edit": ({ data }) => {
+        const { id } = data;
+        print(EditProduct.render(id));
+    },
     "/signup": () => {
         print(Signup.render());
     },
-    "/admin/product/:id/edit": ({ data }) => {
-        const { id } = data;
-        print(AdminProductEdit.render(id));
+    "/signin": () => {
+        print(Signin.render());
     },
-    // "/product/:id": ({ data }) => {
-    //     const { id } = data;
-    //     print(DetailPage.render(id));
-    // },
 });
 router.resolve();

@@ -5,7 +5,7 @@ const AdminProductPage = {
         return `<div>
             <h1>Quản lý product</h1>
             ${AdminProductList.render()}
-        </div>`;
+            </div>`;
     },
 };
 export default AdminProductPage;
